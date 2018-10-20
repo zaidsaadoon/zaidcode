@@ -1,0 +1,25 @@
+
+<body>
+
+<script type="text/javascript">
+//to create new array from merging a and b
+ var a = [1,2,3,4,5];
+ var b = [6, 7, 8,9];
+ function newList(a,b) { 
+  var lengthNew = a.length+b.length;//to get the new array length
+  var z = [];
+  var j=0,k=0;
+  for(var i=0; i<lengthNew;i++) {
+    if(i%2==0) {//if the remaining value is not zero
+      z[i]=a[j++];//taking the value of a and put it in the even index
+    } else {
+      z[i]=b[k++];//taking the value of arry b and put it in the odd index
+    }
+  }
+  return z;
+}
+
+document.write(newList(a,b));//to call the function 
+
+        </script>
+ </body>

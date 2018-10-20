@@ -1,0 +1,41 @@
+<body>
+
+ <script type="text/javascript">
+ //this code is working only for one decimal number , if it is required to solve more than one decimal number we have to add another case statement
+   var Number= [9,8,7,6,5,4,3,0,2,1];//* the array needed to be converted from numbers to word format
+
+   var word= ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];//to get the number from its index
+   
+   for (var i = 0; i < Number.length; i++) {//*this loop is used to convert the whole numbers in the array
+  
+    function convertNumIntoWords(num) {
+
+    switch (("" + num).length) {
+        case 1:
+            return word[num];//get the value from the arrry word depend on its index 
+      
+        default:
+            return "cannot be converted"//if it is not only one decimal number
+    }
+    }
+ 
+
+
+ var outPutArray = new Array(Number.length);//to create new array for the output
+ for(i=0;i<Number.length;i++){
+    outPutArray[i]=convertNumIntoWords(Number[i]);//to call the function and get the output in an array
+ }
+    document.write("["+ outPutArray+"]");//the written output in an HTML
+
+   
+     }
+
+
+ </script>
+    
+    
+    
+    
+    
+    
+</body>
